@@ -5,5 +5,57 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="HorasDistributor.UI.MainWindow"
         Title="HorasDistributor.UI">
-    Welcome to Avalonia!
+	<!--<StackPanel Spacing="5" Margin="10">-->
+		<!--<Grid ShowGridLines="True">-->
+		    <!--<TextBox Grid.Column="0" Text="{Binding Name}" />-->
+		    <!--<TextBox Grid.Column="1" Text="{Binding Horas}" />-->
+		<!--</Grid>-->
+	<!--</StackPanel>-->
+	<Grid ShowGridLines="False" Margin="10">
+		
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.1*"></RowDefinition>
+			<RowDefinition Height="0.2*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+		</Grid.RowDefinitions>
+		
+	<!--<TextBlock Text="Col0Row0:" Grid.Row="0" Grid.Column="0"/>
+	<TextBlock Text="Col0Row1:" Grid.Row="1" Grid.Column="0"/>-->
+		<StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Spacing="5">
+
+			<TextBlock Text="Work Package" VerticalAlignment="Center"></TextBlock>
+		</StackPanel>
+
+		<StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Spacing="5">
+
+			<TextBlock Text="Investigador" VerticalAlignment="Center"></TextBlock>
+		</StackPanel>
+		<!--<Label Grid.Column="0" Text="Work Packages" />-->
+		<StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Spacing="5">
+			<Grid ShowGridLines="False" Margin="10">
+				
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				
+				<TextBox Width="100"  Grid.Column="0" Margin="10" Watermark="Nombre" HorizontalAlignment="Left"/>
+				<TextBox Width="100"  Grid.Column="1" Margin="10" Watermark="Horas" HorizontalAlignment="Center"/>
+				<TextBox Width="100"  Grid.Column="2" Margin="10" Watermark="Coste" HorizontalAlignment="Right"/>
+				<Button Width="160" Grid.Column="3" HorizontalContentAlignment="Center">Añadir</Button>
+			</Grid>
+
+		</StackPanel>
+		
+		<TextBox Grid.Column="0" Grid.Row="2" Margin="10" Text="{Binding Name}" />
+		<TextBox Grid.Column="1" Grid.Row="2" Margin="10" Text="{Binding Horas}" />
+		<TextBox Grid.ColumnSpan="2" Grid.Row="3" Margin="10" Text="{Binding Costes}" />
+	</Grid>
 </Window>
